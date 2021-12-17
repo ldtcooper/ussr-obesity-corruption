@@ -1,0 +1,10 @@
+__pycache__/
+2017-images/
+Data
+caffe/
+VGGFace/
+charts/
+svr_parameters
+vgg_face.py
+vgg_face.npy
+vgg_face.pyc

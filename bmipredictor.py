@@ -1,4 +1,4 @@
-from keras_vggface.vggface import VGGFace
+from vgg_face import VGGFace
 import io
 import os
 import sys
@@ -6,18 +6,17 @@ import pickle
 import urllib.request as urllib
 import numpy as np
 import tensorflow as tf
-from pil import Image
+from PIL import Image
 
 
 dir_path = os.path.dirname(os.path.realpath(
     __file__))  # full path to this file
-
 sys.path.append('{}/VGGFace/'.format(dir_path))
 
 
 svr_path = 'svr_parameters'
 
-weight_path = 'VGGFace/vgg_face.npy'
+weight_path = './vgg_face.npy'
 
 
 def read_image(url):
@@ -25,9 +24,8 @@ def read_image(url):
         return Image.open(url)
     except IOError:
         fd = urllib.urlopen(url)
-
-    image_file = io.BytesIO(fd.read())
-    return Image.open(image_file)
+        image_file = io.BytesIO(fd.read())
+        return Image.open(image_file)
 
 
 def get_data(path):
@@ -36,7 +34,9 @@ def get_data(path):
     black = Image.new('L', (max_edge, max_edge), 0)
     black.paste(img, [max_edge//2 - img.size[0]//2,
                     max_edge//2 - img.size[1]//2,
+
                     max_edge//2 + (img.size[0]+1)//2,
+
                     max_edge//2 + (img.size[1]+1)//2])
     img = black.resize((224, 224))
     img = np.array(img).astype(np.float32)
@@ -51,12 +51,10 @@ class BMIPredictor(object):
     def __init__(self):
         self.image_ = tf.placeholder(tf.float32, shape=[1, 224, 224, 3])
         print('Initializing the TensorFlow graph...')
-        
         self.net = VGGFace({'data': self.image_})
         self.sess = tf.Session()
         print('Restoring the weights...')
         self.net.load(weight_path, self.sess)
-        
         with open(svr_path, 'rb') as f:
             self.clf = pickle.load(f, encoding='latin1')
         print('Done...')
@@ -64,10 +62,7 @@ class BMIPredictor(object):
 
     def predict(self, path):
         image = get_data(path)
-
         embedding = self.sess.run(
             self.net.layers['fc6'], feed_dict={self.image_: image})
-
         prediction = self.clf.predict(embedding)
-
         return prediction[0]
