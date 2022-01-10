@@ -13,3 +13,10 @@ While an intriguing idea, Blavatskyy's original paper lacked controls for factor
 Blavatskyy's original paper does only a cursory job of proving his hypothesis. Using facial photographs of ministers from the former USSR who were in power in 2017, he estimates their BMIs, and then notes several correlations. Namely, that those BMIs are correlated with five corruption measures such that lighter ministers and less corruption go together; and that countries with heaver ministers have lighter people. 
 
 My paper focuses in on two simple controls: age and sex. Cabinet ministers are, as a whole, much older and much more male than the populations they represent. Because of this, I focus on age and sex as controls. The first stage of doing this works similarly to Blavatskyy's paper: I examine the correlations between age, sex, BMI, and corruption. The second stage is more complex. It uses a multivariate linear regression trained on health data from the forer USSR to estimate what the BMI of a person of a given age and gender 'should' be. Then, I run the age and sex data of the 2017 ministers through the resulting regression equation to correct for age and sex differences and then see if the resulting corrected values still correlate positively with corruption and negatively with BMI in each country.
+
+## Credits
+The following files were written by Pavlo Blavatskyy and were taken from the appendix to his paper which can be found at the link in the "What is this project?" section:
+- `bmipredictor.py`
+
+## Running this project
+Unfortunately, this entire project can't be run from this repo, as there are several pieces of code I can't freely distribute on GitHub. These files can however be provided upon request.
