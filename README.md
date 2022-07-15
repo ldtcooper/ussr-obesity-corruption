@@ -20,3 +20,5 @@ The following files were written by Pavlo Blavatskyy and were taken from the app
 
 ## Running this project
 Unfortunately, this entire project can't be run from this repo, as there are several pieces of code I can't freely distribute on GitHub. These files can however be provided upon request.
+
+However, if one wanted to get this to run, you would need to set up a Python 3.5 enviornment in order to run `bmipredictor.py`. If that is not a requirement, then it can be run in any newer version of Python.
