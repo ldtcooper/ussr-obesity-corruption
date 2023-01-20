@@ -1,0 +1,6 @@
+Measure,Coefficient,P-Value,R-Squared,Observations
+World Bank Control of Corruption 2017,-0.4244,<0.001,0.835,15
+Corruption Perceptions Index,-8.2239,<0.001,0.860,15
+Basel Anti Money Laundering Index 2017 ,0.6202,0.011,0.612,13
+IDEA Absence of Corruption 2017 ,-0.0948,<0.001,0.653,15
+Index of Public Integrity 2017 ,-0.6270,<0.001,0.850,11

@@ -1,9 +1,11 @@
 __pycache__/
 2017-images/
+us-images/
 Data
 caffe/
 VGGFace/
 charts/
+caffe/
 svr_parameters
 vgg_face.py
 vgg_face.npy
