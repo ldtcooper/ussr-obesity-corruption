@@ -6,6 +6,7 @@ caffe/
 VGGFace/
 charts/
 caffe/
+caffe/*
 svr_parameters
 vgg_face.py
 vgg_face.npy
