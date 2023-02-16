@@ -1,6 +1,6 @@
 # README
 
-This repo contains the code for a research project of mine. You can read the entirety of the working paper [here](https://www.logan-cooper.com/assets/Cooper_Obesity_and_Corruption.pdf).
+This repo contains the code for a research project of mine. You can read the entirety of the working paper [here](https://www.logan-cooper.com/assets/Cooper_Becker_Obesity_and_Corruption.pdf).
 
 ## What is this project?
 In 2021, Professor Pavlo Blavatskyy published his paper "Obesity of politicians and corruption in post-Soviet countries" ([link](https://onlinelibrary.wiley.com/doi/abs/10.1111/ecot.12259)). The thesis of this paper is that the body mass index (BMI) of cabinet-level ministers can be used as a proxy for high-level corruption in a country, and backs it up with evidence from the former Soviet Union. To obtain the BMI of these leaders, he used a computer vision algorithm developed by Kocabey et al ([link](https://www.researchgate.net/publication/314433619_Face-to-BMI_Using_Computer_Vision_to_Infer_Body_Mass_Index_on_Social_Media)). 
