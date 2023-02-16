@@ -18,6 +18,9 @@ My paper focuses in on two simple controls: age and sex. Cabinet ministers are, 
 The following files were written by Pavlo Blavatskyy and were taken from the appendix to his paper which can be found at the link in the "What is this project?" section:
 - `bmipredictor.py`
 
+The entire `/caffe` directory is an older version of Saumitro Dasgupta's [caffe-tensorflow package](https://github.com/ethereon/caffe-tensorflow).
+
+
 ## Running this project
 Unfortunately, this entire project can't be run from this repo, as there are several pieces of code I can't freely distribute on GitHub. These files can however be provided upon request.
 
