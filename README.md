@@ -25,3 +25,5 @@ The directory `/VGGFace` as well as the files `vgg_face.npy`, `vgg_face.py`, and
 Unfortunately, this entire project can't be run from this repo, as there are several pieces of code I can't freely distribute on GitHub. These files can however be provided upon request.
 
 However, if one wanted to get this to run, you would need to set up a Python 3.5 environment in order to run `bmipredictor.py`. If that is not a requirement, then it can be run in any newer version of Python.
+
+Note that `vgg_face.npy` is **very large** and is stored in this repo with [Git Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).
